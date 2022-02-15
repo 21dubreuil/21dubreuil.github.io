@@ -1,0 +1,128 @@
+body{
+    background-color : black;
+    margin-left : 10px
+}
+h2 {
+    margin-left : 10px;
+}
+h1{
+    margin : 25px 0 25px 0;
+}
+
+section.corps{
+    display: grid;
+    grid-template-columns: 
+      1fr;
+    grid-template-areas:
+      "photo"
+      "header"
+      "infos"
+      "parcours"
+      "skills"
+      "pro"
+      "asso";
+    column-gap: 5px;
+    row-gap : 5px;
+}
+
+
+section.nom{
+    grid-area: header;
+    background-color: wheat;
+}
+h1#nom{
+    margin : 10px 0px 5px 0px 
+}
+p#nom {
+    margin : 0px 0px 20px 0px
+}
+.infos{
+    grid-area:infos;
+    background-color : rgb(156, 175, 156);
+    padding-bottom: 3px;
+}
+
+.image{
+    grid-area: photo;
+    background-color: none
+
+}
+section.adresse{
+    margin-left : 10px;
+    padding : 0 0 0 10px;
+    border: 1px solid rgb(4, 4, 15);
+    border-radius: 5px;
+    margin: 2px;
+}
+section.tel{
+    margin-left : 10px;
+    border: 1px solid rgb(4, 4, 15);
+    border-radius: 5px;
+    margin: 2px;
+}
+section.mail{
+    margin-left : 10px;
+    border: 1px solid rgb(4, 4, 15);
+    border-radius: 5px;
+    margin: 2px;
+}
+.skills{
+    grid-area: skills;
+    background-color: darkgrey;
+}
+
+.parcours{
+    grid-area: parcours;
+    background-color:rgba(255, 235, 205, 0.705);
+}
+
+a {
+    color : black;
+    text-decoration : none;
+
+}
+
+section.exp-pro{
+    grid-area:pro;
+    background-color: rgba(211, 168, 89, 0.794);
+}
+
+section.exp-asso{
+    grid-area: asso;
+    background-color: rgb(172, 166, 166);
+}
+
+
+
+/*large screen*/
+@media only screen and (min-width : 700px) {
+    html>body>section.corps{
+        grid-template-columns: 
+        300px 350px 1fr 259px;
+    grid-template-areas: 
+      "header header header photo"
+      "skills  infos infos photo"
+      "skills  parcours parcours parcours"
+      "pro pro asso asso";
+    column-gap: 5px;
+    row-gap : 5px;
+    grid-template-rows: 70px 325px 1fr 1fr;
+    height: 100vh;
+    }
+
+    p#mes_infos{
+        margin-left : 10px
+    }
+    #skills{
+        margin-left : 10px
+    }
+    #parcours{
+        margin-left : 10px
+    }
+    
+    section.infos{
+        display: grid;
+        grid-template-columns: 
+            repeat(auto-fit, minmax(250px, 1fr))
+    }
+}
